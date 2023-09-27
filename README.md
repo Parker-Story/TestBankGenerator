@@ -1,6 +1,6 @@
 # TestBankGenerator (Emerging Scholars)
 
-Welcome to the TestBankGenerator project, a part of the Emerging Scholars Program at the University of Louisiana at Monroe (ULM). This project, developed in collaboration with Dr. Cordova, ULM's program coordinator of Computer Science, aims to revolutionize the way Discrete Structures questions are generated and utilized within the university. Our objective is to create a program that can efficiently generate an unlimited number of unique questions for various question types, promoting cooperation and group studying among students.
+Welcome to the TestBankGenerator project, a part of the Emerging Scholars Program at the University of Louisiana at Monroe (ULM). This project, developed in collaboration with [Dr. Cordova](https://webservices.ulm.edu/facultyactivities/profile/cordova), ULM's program coordinator of Computer Science, aims to revolutionize the way Discrete Structures questions are generated and utilized within the university. Our objective is to create a program that can efficiently generate an unlimited number of unique questions for various question types, promoting cooperation and group studying among students.
 
 **Table of Contents**
 - [Overview](#overview)
