@@ -1,27 +1,54 @@
 # TestBankGenerator (Emerging Scholars)
 
-Via the Emerging Scholars Program I have had the privlage to work with ULM’s program coordinator of Computer Science, Dr. Cordova, on this facinating project that has some very exciting ideas for application within the university. Starting Spring 2023, our goal was to write a program for each Discrete Structures question type that could recieve data from a file and then use that data to instantly generate an unlimited amount of unique questions for that respective type. The wider scope of the project is to collect data and determine if each student getting their own unique question encourages cooperation and group studying, thus improving overall study time and scores in the course.
+Welcome to the TestBankGenerator project, a part of the Emerging Scholars Program at the University of Louisiana at Monroe (ULM). This project, developed in collaboration with Dr. Cordova, ULM's program coordinator of Computer Science, aims to revolutionize the way Discrete Structures questions are generated and utilized within the university. Our objective is to create a program that can efficiently generate an unlimited number of unique questions for various question types, promoting cooperation and group studying among students.
 
-By the end of the Semester, we began using the software to generate questions for in class activities, homework, quizzes, and tests.
+**Table of Contents**
+- [Overview](#overview)
+- [Project Goals](#project-goals)
+- [Current Progress](#current-progress)
+- [LogicQuestion](#logicquestion)
+- [Moodle Compatibility](#moodle-compatibility)
+- [Canvas Compatibility](#canvas-compatibility)
+- [Data Extraction](#data-extraction)
 
-Before any data was able to be collected, Dr. Cordova and I were informed that the University will be switching to the LMS Canvas so the primary focus for the Fall 2023 semester will be converting the existing software so that it functions within the new LMS.
+## Overview
 
-Thus, this repository will serve as a way to document progress and to enable cooperation via multiple machines.
+Through the Emerging Scholars Program, we have embarked on an exciting journey to enhance the learning experience at ULM. Starting in Spring 2023, we initiated the development of software capable of generating diverse questions for Discrete Structures courses. The key innovation is our ability to generate personalized questions for each student, fostering cooperation and improving overall learning outcomes.
 
+## Project Goals
+
+Our project encompasses the following goals:
+
+1. Create a program for generating unique questions for different Discrete Structures question types.
+2. Enable the program to receive data from files and use that data for question generation.
+3. Collect data to determine if personalized questions promote cooperation and group studying.
+4. Enhance overall study time and scores in the course.
+
+## Current Progress
+
+By the end of the Spring 2023 semester, we successfully integrated our software into various aspects of the course, including in-class activities, homework, quizzes, and tests. However, we encountered a pivotal development with ULM's transition to the Canvas Learning Management System (LMS) scheduled for the Spring 2024 semester.
 
 ## LogicQuestion
 
-The LogicQuestion file is the abstract super class by which all current question types extend from.
+The `LogicQuestion` file serves as the abstract superclass from which all current question types extend. It forms the foundation for question generation within our software.
 
+## Moodle Compatibility
 
-## Moodle Compatible 
+To facilitate integration with Moodle, we have developed the following components:
 
-TranslateToLogic 1-10 and TranslateFromLogic 1-10 all output a specific question in XML format that can be saved and imported into moodle. 
+- `TranslateToLogic 1-10`: Outputs questions in XML format that can be saved and imported into Moodle.
+- `TranslateFromLogic 1-10`: Outputs questions in XML format that can be saved and imported into Moodle.
 
-## Canvas Compatible
+## Canvas Compatibility
 
-None currently. Transfering current software and developing new questions is this semseter's project.
+As of now, our software is not compatible with Canvas. Our primary focus for the Fall 2023 semester is to adapt and transfer the existing software to function seamlessly within the new Canvas LMS.
 
 ## Data Extraction
 
-The data extraction file pulls data from a file which is used to randomize each question. words.txt is just an arbitrary file we began with to test certain features.
+The `ExtractWords` file is responsible for extracting data from a file, which is then used to randomize each question. We initially used `words.txt` as an arbitrary file to test certain features and is not relevant to the existing software.
+
+This repository serves as a documentation hub for our project's progress.
+
+We are excited to continue this journey, adapt our software for Canvas, and further enhance the learning experience at ULM. Your contributions and feedback are welcome as we strive to reach our goals.
+
+Feel free to explore the sections above for more details on each aspect of our project.
