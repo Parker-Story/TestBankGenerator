@@ -8,68 +8,127 @@ public class CanvasTestTranslateFromLogic1 extends LogicQuestion {
 
     public String generate() {
         StringBuilder str = new StringBuilder();
-        str.append(String.format("%s\n","<qti-assessment-item"));
-        str.append(String.format("%s\n","xmlns=\"http://www.imsglobal.org/xsd/qti/imsqtiasi_v3p0\""));
-        str.append(String.format("%s\n","xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\""));
-        str.append(String.format("%s\n","xsi:schemaLocation=\"http://www.imsglobal.org/xsd/imsqtiasi_v3p0"));
+        str.append(String.format("%s\n","<item ident=\"\"", qNumber));
+        str.append(String.format("%s\n","<itemmetadata>"));
+        str.append(String.format("%s\n","<qtimetadata>"));
+        str.append(String.format("%s\n","<qtimetadatafield>"));
         str.append(String.format("%s\n","https://purl.imsglobal.org/spec/qti/v3p0/schema/xsd/imsqti_asiv3p0_v1p0.xsd\""));
-        str.append(String.format("%s\n","identifier=\"TranslateFromLogic1\""));
-        str.append(String.format("%s\n","time-dependent=\"false\""));
-        str.append(String.format("%s\n","xml:lang=\"en-US\""));
-        
-        str.append(String.format("%s\n","<qti-response-declaration base-type=\"identifier\" cardinality=\"single\" identifier=\"RESPONSE\">"));
-        str.append(String.format("%s\n","<qti-correct-response>"));
-        str.append(String.format("%s\n","<qti-value>I</qti-value>")); // Assign correct response
-        str.append(String.format("%s\n","</qti-correct-response>"));
-        str.append(String.format("%s\n","</qti-response-declaration> base-type=\"float\" cardinality=\"single\" identifier=\"SCORE\">\""));
-        str.append(String.format("%s\n","<qti-default-value>"));
-        str.append(String.format("%s\n","<qti-value>1</qti-value>"));
-        str.append(String.format("%s\n","</qti-default-value>"));
-        str.append(String.format("%s\n","</qti-outcome-declaration>"));
+        str.append(String.format("%s\n","<fieldlabel>question_type</fieldlabel>"));
+        str.append(String.format("%s\n","<fieldentry>multiple_choice_question</fieldentry>"));
+        str.append(String.format("%s\n","</qtimetadatafield>"));
+        str.append(String.format("%s\n","<qtimetadatafield>"));
+        str.append(String.format("%s\n","<fieldlabel>points_possible</fieldlabel>"));
+        str.append(String.format("%s\n","<fieldentry>5</fieldentry>")); // Assign correct response
+        str.append(String.format("%s\n","</qtimetadatafield>"));
+        str.append(String.format("%s\n","<qtimetadatafield>"));
+        str.append(String.format("%s\n","<fieldlabel>assessment_question_identifierref</fieldlabel>"));
+        str.append(String.format("%s\n","<fieldentry>if6eca05e4deb6729600d74461cb79f88</fieldentry>"));
+        str.append(String.format("%s\n","</qtimetadatafield>"));
+        str.append(String.format("%s\n","</qtimetadata>"));
+        str.append(String.format("%s\n","</itemmetadata>"));
+        str.append(String.format("%s\n","<presentation>"));
+        str.append(String.format("%s\n","<material>"));
 
         // Question Text
-        str.append(String.format("%s\n","<qti-item-body>"));
-        str.append(String.format("%s\n %s %s\n %s %s\n %s %s\n %s\n %s\n", "Let p, q and r be the following statements.",
+        str.append(String.format("%s\n %s %s\n %s %s\n %s %s\n %s\n %s\n", "<mattext texttype=\"text/html\">Let p, q and r be the following statements.",
                                                                            "p:", getP(),
                                                                            "q:", getQ(),
                                                                            "r:", getR(),
                                                                            "Consider the logic expression below\n P &and; Q",
                                                                            "Select the correct English translation for the logic expression."));     
+        str.append(String.format("%s\n","</material>"));
         
-        str.append(String.format("%s\n","<qti-choice-interaction max-choices=\"1\" min-choices=\"1\" response-identifier=\"RESPONSE\">"));  
-        
-        // Answer Choices                                                                                                                                                                                                 
-        str.append(String.format("%s %s %s %s %s %s %s\n","<qti-simple-choice identifier=\"A\">", 
+        str.append(String.format("%s\n","<response_lid ident=\"response1\" rcardinality=\"Single\">"));  
+        str.append(String.format("%s\n","<render_choice>"));  
+        str.append(String.format("%s %d%s\n","<response_label ident=", qNumber, "\"000\">"));
+        str.append(String.format("%s\n","<material>"));
+        // Answer Choice 1                                                                                                                                                                                               
+        str.append(String.format("%s %s %s %s %s %s %s\n","<mattext texttype=\"text/plain\">", 
                       getNegation(getP()), "and,", getQ(), "or", getR(),
-                      "</qti-simple-choice>"));
-        str.append(String.format("%s %s %s %s %s\n","<qti-simple-choice identifier=\"B\">", 
-                      getP(), "or", getQ(),"</qti-simple-choice>"));
-        str.append(String.format("%s %s %s %s %s %s %s\n","<qti-simple-choice identifier=\"C\">", 
+                      "<mattext>"));
+        str.append(String.format("%s\n","</material>"));
+        str.append(String.format("%s\n","</response_label>"));
+
+        // Answer Choice 2
+        str.append(String.format("%s %d%s\n","<response_label ident=", qNumber, "\"001\">"));
+        str.append(String.format("%s\n","<material>"));
+        str.append(String.format("%s %s %s %s %s\n","<mattext texttype=\"text/plain\">", 
+                      getP(), "or", getQ(),"</mattext>"));
+        str.append(String.format("%s\n","</material>"));
+        str.append(String.format("%s\n","</response_label>"));
+
+        // Answer Choice 3   
+        str.append(String.format("%s %d%s\n","<response_label ident=", qNumber, "\"002\">"));
+        str.append(String.format("%s\n","</material>"));   
+        str.append(String.format("%s %s %s %s %s %s %s\n","<mattext texttype=\"text/plain\">", 
                       getP(),"or,", getQ(), "and", getR(),
-                      "</qti-simple-choice>"));
-        str.append(String.format("%s %s %s %s %s %s %s\n","<qti-simple-choice identifier=\"D\">", 
+                      "</mattext>"));
+        str.append(String.format("%s\n","</material>"));
+        str.append(String.format("%s\n","</response_label>"));
+
+        // Answer Choice 4
+        str.append(String.format("%s %d%s\n","<response_label ident=", qNumber, "\"003\">"));
+        str.append(String.format("%s\n","</material>"));   
+        str.append(String.format("%s %s %s %s %s %s %s\n","<mattext texttype=\"text/plain\">", 
                       getP(), "or,", getNegation(getQ()), "and", getR(),
-                      "</qti-simple-choice>"));
-        str.append(String.format("%s %s %s %s %s %s %s\n","<qti-simple-choice identifier=\"E\">", 
+                      "</mattext>"));
+        str.append(String.format("%s\n","</material>"));
+        str.append(String.format("%s\n","</response_label>"));
+
+        // Answer Choice 4
+        str.append(String.format("%s %d%s\n","<response_label ident=", qNumber, "\"004\">"));
+        str.append(String.format("%s\n","</material>"));  
+        str.append(String.format("%s %s %s %s %s %s %s\n","<mattext texttype=\"text/plain\">", 
                       getP(), "and,", getQ(), "or", getR(),
-                      "</qti-simple-choice>"));
-        str.append(String.format("%s %s %s %s %s %s %s\n","<qti-simple-choice identifier=\"F\">", 
+                      "</mattext>"));
+        str.append(String.format("%s\n","</material>"));
+        str.append(String.format("%s\n","</response_label>"));
+
+        // Answer Choice 5
+        str.append(String.format("%s %d%s\n","<response_label ident=", qNumber, "\"005\">"));
+        str.append(String.format("%s\n","</material>"));  
+        str.append(String.format("%s %s %s %s %s %s %s\n","<mattext texttype=\"text/plain\">", 
                       getP(), "and,", getQ(), "or", getNegation(getR()),
-                      "</qti-simple-choice>"));
-        str.append(String.format("%s %s %s %s %s\n","<qti-simple-choice identifier=\"G\">", 
+                      "</mattext>"));
+        str.append(String.format("%s\n","</material>"));
+        str.append(String.format("%s\n","</response_label>"));
+
+        // Answer Choice 6
+        str.append(String.format("%s %d%s\n","<response_label ident=", qNumber, "\"006\">"));
+        str.append(String.format("%s\n","</material>")); 
+        str.append(String.format("%s %s %s %s %s\n","<mattext texttype=\"text/plain\">", 
                       getNegation(getP()), "and", getQ(),
-                      "</qti-simple-choice>"));
-        str.append(String.format("%s %s %s %s %s %s %s\n","<qti-simple-choice identifier=\"H\">", 
+                      "</mattext>"));
+        str.append(String.format("%s\n","</material>"));
+        str.append(String.format("%s\n","</response_label>"));
+
+        // Answer Choice 7
+        str.append(String.format("%s %d%s\n","<response_label ident=", qNumber, "\"007\">"));
+        str.append(String.format("%s\n","</material>")); 
+        str.append(String.format("%s %s %s %s %s %s %s\n","<mattext texttype=\"text/plain\">", 
                       getNegation(getP()), "or,", getQ(), "and", getR(),
-                      "</qti-simple-choice>"));
-        str.append(String.format("%s %s %s %s %s\n","<qti-simple-choice identifier=\"I\">", 
+                      "</mattext>"));
+        str.append(String.format("%s\n","</material>"));
+        str.append(String.format("%s\n","</response_label>"));
+
+        // Answer Choice 8
+        str.append(String.format("%s %d%s\n","<response_label ident=", qNumber, "\"008\">"));
+        str.append(String.format("%s\n","</material>")); 
+        str.append(String.format("%s %s %s %s %s\n","<mattext texttype=\"text/plain\">", 
                       getP(), "and", getQ(),
-                      "</qti-simple-choice>"));
-        str.append(String.format("%s\n","</qti-choice-interaction>"));
-        str.append(String.format("%s\n","</qti-item-body>"));
-        str.append(String.format("%s\n","<qti-response-processing template=\"https://purl.imsglobal.org/spec/qti/v3p0/rptemplates/match_correct\"/>"));
-        str.append(String.format("%s\n","</qti-assessment-item>"));
-        
+                      "</mattext>"));
+
+        str.append(String.format("%s\n","</material>"));
+        str.append(String.format("%s\n","</response_label>"));
+        str.append(String.format("%s\n%s\n%s\n","</render_choice>","</response_lid>","</presentation>"));
+        str.append(String.format("%s\n","<resprocessing>"));
+        str.append(String.format("%s\n%s\n%s\n","<outcomes>","<decvar maxvalue=\"100\" minvalue=\"0\" varname=\"SCORE\" vartype=\"Decimal\"/>", "</outcomes>"));
+        str.append(String.format("%s\n%s\n%s\n%s\n","<respcondition continue=\"No\">","<conditionvar>","<varequal respident=\"response1\">1001</varequal>","</conditionvar>"));
+        str.append(String.format("%s\n","<setvar action=\"Set\" varname=\"SCORE\">100</setvar>"));
+        str.append(String.format("%s\n","</respcondition>"));
+        str.append(String.format("%s\n","</resprocessing>"));
+        str.append(String.format("%s\n","</item>"));
+
         return str.toString();
     }
 
