@@ -40,7 +40,7 @@ public class CanvasTestTranslateFromLogic1 extends LogicQuestion {
         
         str.append(String.format("%s\n","<response_lid ident=\"response1\" rcardinality=\"Single\">"));  
         str.append(String.format("%s\n","<render_choice>"));  
-        str.append(String.format("%s %d%s\n","<response_label ident=", qNumber, "\"000\">"));
+        str.append(String.format("%s %d%s\n","<response_label ident=\"", qNumber, "000\">"));
         str.append(String.format("%s\n","<material>"));
         // Answer Choice 1                                                                                                                                                                                               
         str.append(String.format("%s %s %s %s %s %s %s\n","<mattext texttype=\"text/plain\">", 
@@ -50,7 +50,7 @@ public class CanvasTestTranslateFromLogic1 extends LogicQuestion {
         str.append(String.format("%s\n","</response_label>"));
 
         // Answer Choice 2
-        str.append(String.format("%s %d%s\n","<response_label ident=", qNumber, "\"001\">"));
+        str.append(String.format("%s %d%s\n","<response_label ident=\"", qNumber, "001\">"));
         str.append(String.format("%s\n","<material>"));
         str.append(String.format("%s %s %s %s %s\n","<mattext texttype=\"text/plain\">", 
                       getP(), "or", getQ(),"</mattext>"));
@@ -58,7 +58,7 @@ public class CanvasTestTranslateFromLogic1 extends LogicQuestion {
         str.append(String.format("%s\n","</response_label>"));
 
         // Answer Choice 3   
-        str.append(String.format("%s %d%s\n","<response_label ident=", qNumber, "\"002\">"));
+        str.append(String.format("%s %d%s\n","<response_label ident=\"", qNumber, "002\">"));
         str.append(String.format("%s\n","</material>"));   
         str.append(String.format("%s %s %s %s %s %s %s\n","<mattext texttype=\"text/plain\">", 
                       getP(),"or,", getQ(), "and", getR(),
@@ -67,7 +67,7 @@ public class CanvasTestTranslateFromLogic1 extends LogicQuestion {
         str.append(String.format("%s\n","</response_label>"));
 
         // Answer Choice 4
-        str.append(String.format("%s %d%s\n","<response_label ident=", qNumber, "\"003\">"));
+        str.append(String.format("%s %d%s\n","<response_label ident=\"", qNumber, "003\">"));
         str.append(String.format("%s\n","</material>"));   
         str.append(String.format("%s %s %s %s %s %s %s\n","<mattext texttype=\"text/plain\">", 
                       getP(), "or,", getNegation(getQ()), "and", getR(),
@@ -76,7 +76,7 @@ public class CanvasTestTranslateFromLogic1 extends LogicQuestion {
         str.append(String.format("%s\n","</response_label>"));
 
         // Answer Choice 4
-        str.append(String.format("%s %d%s\n","<response_label ident=", qNumber, "\"004\">"));
+        str.append(String.format("%s %d%s\n","<response_label ident=\"", qNumber, "004\">"));
         str.append(String.format("%s\n","</material>"));  
         str.append(String.format("%s %s %s %s %s %s %s\n","<mattext texttype=\"text/plain\">", 
                       getP(), "and,", getQ(), "or", getR(),
@@ -85,7 +85,7 @@ public class CanvasTestTranslateFromLogic1 extends LogicQuestion {
         str.append(String.format("%s\n","</response_label>"));
 
         // Answer Choice 5
-        str.append(String.format("%s %d%s\n","<response_label ident=", qNumber, "\"005\">"));
+        str.append(String.format("%s %d%s\n","<response_label ident=\"", qNumber, "005\">"));
         str.append(String.format("%s\n","</material>"));  
         str.append(String.format("%s %s %s %s %s %s %s\n","<mattext texttype=\"text/plain\">", 
                       getP(), "and,", getQ(), "or", getNegation(getR()),
@@ -94,7 +94,7 @@ public class CanvasTestTranslateFromLogic1 extends LogicQuestion {
         str.append(String.format("%s\n","</response_label>"));
 
         // Answer Choice 6
-        str.append(String.format("%s %d%s\n","<response_label ident=", qNumber, "\"006\">"));
+        str.append(String.format("%s %d%s\n","<response_label ident=\"", qNumber, "006\">"));
         str.append(String.format("%s\n","</material>")); 
         str.append(String.format("%s %s %s %s %s\n","<mattext texttype=\"text/plain\">", 
                       getNegation(getP()), "and", getQ(),
@@ -103,7 +103,7 @@ public class CanvasTestTranslateFromLogic1 extends LogicQuestion {
         str.append(String.format("%s\n","</response_label>"));
 
         // Answer Choice 7
-        str.append(String.format("%s %d%s\n","<response_label ident=", qNumber, "\"007\">"));
+        str.append(String.format("%s %d%s\n","<response_label ident=\"", qNumber, "007\">"));
         str.append(String.format("%s\n","</material>")); 
         str.append(String.format("%s %s %s %s %s %s %s\n","<mattext texttype=\"text/plain\">", 
                       getNegation(getP()), "or,", getQ(), "and", getR(),
@@ -112,7 +112,7 @@ public class CanvasTestTranslateFromLogic1 extends LogicQuestion {
         str.append(String.format("%s\n","</response_label>"));
 
         // Answer Choice 8
-        str.append(String.format("%s %d%s\n","<response_label ident=", qNumber, "\"008\">"));
+        str.append(String.format("%s %d%s\n","<response_label ident=\"", qNumber, "008\">"));
         str.append(String.format("%s\n","</material>")); 
         str.append(String.format("%s %s %s %s %s\n","<mattext texttype=\"text/plain\">", 
                       getP(), "and", getQ(),
