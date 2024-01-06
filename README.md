@@ -1,6 +1,6 @@
 # TestBankGenerator (Emerging Scholars)
 
-Welcome to the TestBankGenerator project, a part of the Emerging Scholars Program at the University of Louisiana at Monroe (ULM). This project, developed in collaboration with [Dr. Cordova](https://webservices.ulm.edu/facultyactivities/profile/cordova), ULM's program coordinator of Computer Science, aims to revolutionize the way Discrete Structures questions are generated and utilized within the university. Our objective is to create a program that can efficiently generate an unlimited number of unique questions for various question types, promoting cooperation and group studying among students.
+Welcome to the TestBankGenerator project, a part of the Emerging Scholars Program at the University of Louisiana at Monroe (ULM). This project, developed in collaboration with [Dr. Cordova](https://webservices.ulm.edu/facultyactivities/profile/cordova), ULM's former program coordinator of Computer Science, aims to revolutionize the way Discrete Structures questions are generated and utilized within the university. Our objective is to create a program that can efficiently generate an unlimited number of unique questions for various question types, promoting cooperation and group studying among students.
 
 **Table of Contents**
 - [Overview](#overview)
@@ -36,8 +36,10 @@ The `LogicQuestion` file serves as the abstract superclass from which all curren
 
 To facilitate integration with Moodle, we have developed the following components:
 
-- `TranslateToLogic 1-10`: Outputs questions in XML format that can be saved and imported into Moodle.
-- `TranslateFromLogic 1-10`: Outputs questions in XML format that can be saved and imported into Moodle.
+- `TranslateToLogic 1-10`
+- `TranslateFromLogic 1-10`
+
+Both of the above files outputs questions in XML format that can be saved and imported into Moodle.
 
 ## Canvas Compatibility
 
@@ -49,6 +51,6 @@ The `ExtractWords` file is responsible for extracting data from a file, which is
 
 This repository serves as a documentation hub for our project's progress.
 
-We are excited to continue this journey, adapt our software for Canvas, and further enhance the learning experience at ULM. Your contributions and feedback are welcome as we strive to reach our goals.
+We are excited to continue this journey, adapt our software for Canvas, and further enhance the learning experience at ULM. Your contributions and feedback are welcome as we strive to reach our goals. Please note that some of the software is not available to preserve academic intergrity. What is shown here is essentially the framework for the project. 
 
 Feel free to explore the sections above for more details on each aspect of our project.
